@@ -1,0 +1,559 @@
+/* ==========================================================================
+   RESOURCE PAGES STYLES
+   Shared styles for Bibliography, Transcripts, and Research pages
+   ========================================================================== */
+
+/* Page Content */
+.page-content {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+/* Page Header */
+.page-header {
+    background: var(--cream);
+    padding: 4rem 0 5rem;
+    border-bottom: 4px solid var(--burgundy);
+}
+
+.back-link {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--burgundy);
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--blue);
+}
+
+.page-title-block {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.page-number {
+    font-family: var(--font-display);
+    font-size: 6rem;
+    line-height: 0.8;
+    color: var(--blue);
+    opacity: 0.4;
+}
+
+.page-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.9;
+    color: var(--burgundy);
+}
+
+.page-intro {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--burgundy-muted);
+    max-width: 600px;
+}
+
+/* Page Body */
+.page-body {
+    background: var(--brown);
+    color: var(--cream);
+    padding: 5rem 0;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 5rem;
+}
+
+.content-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-marker {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(227, 223, 206, 0.1);
+}
+
+.marker-episode {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--blue);
+    background: rgba(148, 177, 200, 0.15);
+    padding: 0.5rem 1rem;
+}
+
+.marker-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--cream);
+}
+
+/* Coming Soon Section */
+.coming-soon-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    border: 2px dashed rgba(227, 223, 206, 0.2);
+}
+
+.coming-soon-text {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--cream-muted);
+}
+
+/* ==========================================================================
+   BIBLIOGRAPHY STYLES
+   ========================================================================== */
+
+.bibliography-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bib-entry {
+    background: rgba(227, 223, 206, 0.05);
+    padding: 2rem;
+    border-left: 3px solid var(--blue);
+    transition: all 0.3s ease;
+}
+
+.bib-entry:hover {
+    background: rgba(227, 223, 206, 0.08);
+    border-left-color: var(--cream);
+}
+
+.bib-type {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.bib-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+}
+
+.bib-author {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--cream);
+    margin-bottom: 0.25rem;
+}
+
+.bib-details {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--cream-muted);
+    margin-bottom: 1rem;
+}
+
+.bib-note {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--cream-muted);
+}
+
+/* ==========================================================================
+   TRANSCRIPT STYLES
+   ========================================================================== */
+
+.transcript-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba(227, 223, 206, 0.1);
+}
+
+.transcript-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.transcript-meta span {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--cream-muted);
+}
+
+.transcript-episode {
+    color: var(--blue) !important;
+    background: rgba(148, 177, 200, 0.15);
+    padding: 0.35rem 0.75rem;
+}
+
+.transcript-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.1;
+    color: var(--cream);
+}
+
+.transcript-content {
+    max-width: 800px;
+}
+
+.transcript-block {
+    margin-bottom: 2rem;
+}
+
+.speaker {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.speaker.host {
+    color: var(--blue);
+}
+
+.speaker.guest {
+    color: var(--burgundy-light);
+}
+
+.dialogue {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--cream);
+}
+
+.transcript-note {
+    background: rgba(148, 177, 200, 0.1);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-left: 3px solid var(--blue);
+}
+
+.transcript-note p {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--cream-muted);
+    font-style: italic;
+}
+
+.timestamp-marker {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(227, 223, 206, 0.1);
+    border-bottom: 1px solid rgba(227, 223, 206, 0.1);
+}
+
+.timestamp {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--blue);
+    background: rgba(148, 177, 200, 0.15);
+    padding: 0.35rem 0.75rem;
+}
+
+.timestamp-note {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--cream-muted);
+}
+
+.transcript-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(227, 223, 206, 0.1);
+}
+
+.transcript-credits {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--cream-muted);
+}
+
+/* ==========================================================================
+   RESEARCH STYLES
+   ========================================================================== */
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.research-item {
+    background: rgba(227, 223, 206, 0.05);
+    padding: 2rem;
+    border: 1px solid rgba(227, 223, 206, 0.1);
+    transition: all 0.3s ease;
+}
+
+.research-item:hover {
+    background: var(--burgundy);
+    border-color: var(--blue);
+    transform: translateY(-3px);
+}
+
+.research-type {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+.research-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.research-desc {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--cream-muted);
+    margin-bottom: 1.5rem;
+}
+
+.research-link {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.research-link:hover {
+    color: var(--cream);
+}
+
+/* Key Findings */
+.key-findings {
+    background: var(--burgundy);
+    padding: 3rem;
+    border: 2px solid var(--blue);
+}
+
+.findings-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin-bottom: 2rem;
+}
+
+.findings-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.findings-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+}
+
+.finding-stat {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--cream);
+    min-width: 100px;
+}
+
+.finding-text {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--cream-muted);
+}
+
+/* Research Intro */
+.research-intro {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(227, 223, 206, 0.1);
+}
+
+.research-section-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.research-text {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--cream);
+    margin-bottom: 1rem;
+}
+
+.research-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Research Question */
+.research-question {
+    background: rgba(148, 177, 200, 0.1);
+    padding: 2.5rem;
+    margin: 3rem 0;
+    border-left: 4px solid var(--blue);
+}
+
+.question-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+.question-text {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--cream);
+}
+
+/* Research Themes */
+.research-themes {
+    margin-top: 3rem;
+}
+
+.themes-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.theme-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(227, 223, 206, 0.05);
+    border: 1px solid rgba(227, 223, 206, 0.1);
+}
+
+.theme-number {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--blue);
+}
+
+.theme-text {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: var(--cream);
+}
+
+@media (max-width: 768px) {
+    .themes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .page-title-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .page-number {
+        font-size: 4rem;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 3rem 0 4rem;
+    }
+    
+    .page-body {
+        padding: 3rem 0;
+    }
+    
+    .section-marker {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .transcript-meta {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .findings-list li {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .finding-stat {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .bib-entry,
+    .research-item {
+        padding: 1.5rem;
+    }
+    
+    .key-findings {
+        padding: 2rem 1.5rem;
+    }
+}
+

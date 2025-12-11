@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPISODE 01: Aurora James | Beneath the Surface</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-editorial.css">
+    <link rel="stylesheet" href="style-podcast.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index-editorial.html" class="logo">BTS<span class="logo-dot"></span></a>
+        <div class="nav-center">
+            <span class="nav-tagline">THE HIDDEN IMPACTS OF DESIGN</span>
+        </div>
+        <div class="nav-links">
+            <a href="index-editorial.html#about">About</a>
+            <a href="index-editorial.html#episodes">Episodes</a>
+            <a href="index-editorial.html#resources">Resources</a>
+            <a href="index-editorial.html#subscribe" class="nav-cta">Subscribe</a>
+        </div>
+    </nav>
+
+    <main class="podcast-page">
+        <div class="container">
+            <a href="index-editorial.html#episodes" class="back-link">← BACK TO EPISODES</a>
+
+            <div class="podcast-header">
+                <div class="episode-badge-large">EPISODE 01</div>
+                <h1 class="podcast-title">AURORA JAMES: DESIGN AS ACTIVISM</h1>
+                <p class="podcast-subtitle">From Brother Vellies to the Fifteen Percent Pledge</p>
+                <div class="podcast-meta">
+                    <span>DEC 2024</span>
+                    <span>•</span>
+                    <span>INTRO TO DESIGN STUDIES</span>
+                </div>
+            </div>
+
+            <div class="podcast-player-section">
+                <div class="podcast-artwork">
+                    <div class="artwork-circles">
+                        <div class="artwork-circle circle-1"></div>
+                        <div class="artwork-circle circle-2"></div>
+                        <div class="artwork-circle circle-3"></div>
+                        <div class="artwork-text">?</div>
+                    </div>
+                </div>
+
+                <div class="audio-player-container">
+                    <audio id="podcast-audio" controls preload="metadata">
+                        <source src="DesignPodcast.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    
+                    <div class="player-controls">
+                        <button class="control-btn" id="play-pause-btn">
+                            <span class="play-icon">▶</span>
+                            <span class="pause-icon">⏸</span>
+                        </button>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <div class="time-display">
+                                <span id="current-time">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                        </div>
+                        <button class="control-btn" id="mute-btn">
+                            <span class="volume-icon">🔊</span>
+                            <span class="mute-icon">🔇</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="podcast-description">
+                <h2 class="description-title">ABOUT THIS EPISODE</h2>
+                <p class="description-text">
+                    How one designer is using craft-based luxury and retail reform to challenge who benefits from fashion. We explore how Aurora James's work with African artisans and her Fifteen Percent Pledge are reshaping supply chains, representation, and economic justice in the industry.
+                </p>
+                <p class="description-text">
+                    Through Brother Vellies, James builds small-batch, craft-centered products that sustain artisan livelihoods and material ethics—the polar opposite of fast-fashion practices. Her non-profit, the Fifteen Percent Pledge, helps shift power structures by pushing to actively re-route value (craft knowledge, jobs, shelf space, capital) to communities typically excluded by fashion and big retail.
+                </p>
+            </div>
+
+            <div class="podcast-resources">
+                <h3 class="resources-title">EPISODE RESOURCES</h3>
+                <div class="resources-links">
+                    <a href="bibliography.html" class="resource-link">
+                        <span class="link-icon">📚</span>
+                        <span>BIBLIOGRAPHY</span>
+                    </a>
+                    <a href="transcripts.html" class="resource-link">
+                        <span class="link-icon">📝</span>
+                        <span>TRANSCRIPT</span>
+                    </a>
+                    <a href="research.html" class="resource-link">
+                        <span class="link-icon">🔬</span>
+                        <span>RESEARCH</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">BENEATH THE SURFACE</span>
+                    <p class="footer-tagline">Exposing the hidden impacts of design.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <a href="index-editorial.html#episodes">EPISODES</a>
+                        <a href="index-editorial.html#resources">RESOURCES</a>
+                        <a href="index-editorial.html#about">ABOUT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 BENEATH THE SURFACE</p>
+                <div class="footer-legal">
+                    <a href="#">PRIVACY</a>
+                    <a href="#">TERMS</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 100);
+        });
+
+        // Audio player functionality
+        const audio = document.getElementById('podcast-audio');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const muteBtn = document.getElementById('mute-btn');
+        const progressFill = document.getElementById('progress-fill');
+        const progressBar = document.getElementById('progress-bar');
+        const currentTimeEl = document.getElementById('current-time');
+        const durationEl = document.getElementById('duration');
+
+        // Play/Pause
+        playPauseBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+
+        audio.addEventListener('play', () => {
+            playPauseBtn.classList.add('playing');
+        });
+
+        audio.addEventListener('pause', () => {
+            playPauseBtn.classList.remove('playing');
+        });
+
+        // Mute/Unmute
+        muteBtn.addEventListener('click', () => {
+            audio.muted = !audio.muted;
+            muteBtn.classList.toggle('muted', audio.muted);
+        });
+
+        // Progress bar
+        audio.addEventListener('loadedmetadata', () => {
+            durationEl.textContent = formatTime(audio.duration);
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressFill.style.width = progress + '%';
+            currentTimeEl.textContent = formatTime(audio.currentTime);
+        });
+
+        // Click on progress bar to seek
+        progressBar.addEventListener('click', (e) => {
+            const rect = progressBar.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            audio.currentTime = pos * audio.duration;
+        });
+
+        // Format time helper
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+    </script>
+</body>
+</html>
+
